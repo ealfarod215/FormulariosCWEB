@@ -1,0 +1,419 @@
+/*Se establece un tipo de letra para toda la pagina*/
+
+* {
+    font-family: 'Muli', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/*Se establece caracteristicas basicas de la pagina*/
+
+body {
+    background: #ECB581;
+    margin: auto;
+}
+
+
+/*Tamaño para header y footer*/
+
+.HyFtamano {
+    width: 100%;
+}
+
+
+/*tamaño para el resto de secciones de la pagina*/
+
+.tamano {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 1.5rem;
+}
+
+
+/*Se inicia trabajo de estilos en el header*/
+
+#Encabezado nav {
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(78, 10, 1, 0.7);
+    width: 100%;
+}
+
+#Encabezado nav ul {
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(255, 255, 255, 0.26);
+    list-style: none;
+}
+
+#Encabezado nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+#Encabezado nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 2rem;
+    padding: 1rem;
+    margin: 0.7rem;
+    /*background   : rgba(0, 0, 0,0.7);*/
+    background: rgba(78, 10, 1, 0.7);
+    border-radius: 1rem;
+}
+
+#Encabezado nav ul li:hover {
+    background: rgb(230, 114, 65);
+}
+
+#cuerpo {
+    margin-top: 5%;
+}
+
+
+/*Fin de trabajo de estilos en el header*/
+
+
+/****************************************/
+
+
+/*Inicio de seccion Inicio*/
+
+#Inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(Imagenes/IMG_7420.jpg);
+    background-size: 100%;
+    background-position-y: center;
+    position: relative;
+    margin-top: 5.3%;
+}
+
+
+/*crea overlay sobre la seccion inico*/
+
+#Inicio:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+#Inicio::after {
+    content: 'CASA DE LA CULTURA MORA';
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    z-index: 0;
+}
+
+
+/*Fin de seccion Inicio*/
+
+
+/***************************************/
+
+
+/*Inicio de seccion About*/
+
+#About {
+    background: rgba(255, 255, 255, 0.26);
+    display: flex;
+}
+
+.fotoAbout {
+    width: 50%;
+    height: 100%;
+}
+
+#About img {
+    width: 100%;
+    height: 100%;
+}
+
+.contenidoAbout {
+    width: 50%;
+    height: 100%;
+}
+
+#parrafos {
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 0.8rem;
+    width: 95%;
+    height: 100%;
+}
+
+
+/*Fin de seccion About*/
+
+
+/*********************/
+
+
+/*Inicio de seccion Profesores*/
+
+#Profesores {
+    display: flex;
+}
+
+.fotoProfes {
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.26);
+}
+
+.contenidoProfe {
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.26);
+}
+
+#valorBusquedaProfesor {
+    padding-top: 1rem;
+    width: 95%;
+    height: 19%;
+}
+
+#formcontactoProfesor {
+    display: flex;
+    width: 95%;
+    height: 30%;
+}
+
+#numeroCedulaProfesor {
+    width: 40%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+#submitbuttom {
+    width: 5rem;
+}
+
+#informacionProfesor {
+    width: 95%;
+    height: 80%;
+}
+
+#informacionProfesor #infoProfesor {
+    width: 95%;
+    height: 80%;
+}
+
+
+/*Fin seccion Profesores*/
+
+
+/***********************/
+
+img {
+    width: 20%;
+}
+
+
+/*Inicio seccion Estudiante*/
+
+#Estudiantes {
+    display: flex;
+}
+
+.fotoEstudiante {
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.26);
+}
+
+.informacionEstudiante {
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.26);
+}
+
+#valorBusquedaEstudiante {
+    padding-top: 1rem;
+    width: 95%;
+    height: 19%;
+}
+
+#formcontactoEstudiante {
+    display: flex;
+    width: 95%;
+    height: 30%;
+}
+
+#numeroCedulaEstudiante {
+    width: 40%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+#submitbuttomEstudiante {
+    width: 5rem;
+}
+
+#informaEstudiante {
+    width: 95%;
+    height: 80%;
+}
+
+#informaEstudiante #infoEstudiante {
+    width: 95%;
+    height: 80%;
+}
+
+.espacio {
+    margin-left: 2rem;
+}
+
+
+/*Fin seccion Estudiante*/
+
+
+/**************************/
+
+
+/*Inicio Secion contacto*/
+
+#Contacto {
+    display: flex;
+    background: rgba(255, 255, 255, 0.26);
+    margin-bottom: 0;
+}
+
+.DivenSeccionContacto {
+    width: 50%;
+    height: 100%;
+}
+
+#contenedorFormulario {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#formcontacto {
+    width: 70%;
+    height: 100%;
+}
+
+.desplegarhaciaabao {
+    display: block;
+    width: 100%;
+    margin: 0.1rem;
+}
+
+#formcontacto textarea {
+    height: 7rem;
+}
+
+#formcontacto input {
+    height: 2rem;
+}
+
+#contenedordebotn {
+    display: flex;
+    justify-content: center;
+}
+
+#submitbuttom {
+    width: 15%;
+    height: auto;
+    margin: 0.1rem;
+}
+
+
+/*Fin Secion contacto*/
+
+
+/******************************************************/
+
+#Activos {
+    background: rgba(255, 255, 255, 0.26);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Inicio seccion Cursos*/
+
+#Cursos {
+    background: rgba(255, 255, 255, 0.26);
+}
+
+
+/*Fin seccion Cursos*/
+
+
+/***********************/
+
+
+/*Inicio Seccion Pie*/
+
+#Pie {
+    bottom: 0;
+    height: 5rem;
+    justify-content: center;
+}
+
+#Pie #contenido {
+    padding-top: 0.3rem;
+    padding-bottom: 1rem;
+    background: rgba(78, 10, 1, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+#Pie #contenido nav {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.26);
+    width: 100%;
+    height: 80%;
+}
+
+#Pie nav ul {
+    display: flex;
+    background: rgba(255, 255, 255, 0.26);
+    list-style: none;
+}
+
+#Pie nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 1.9rem;
+    margin: 0.1%;
+    padding: 1rem;
+    color: white;
+}
+
+.contenedorIconos {
+    margin: 0.1rem;
+}
+
+.cambiarcolor {
+    color: red;
+}
+
+
+/*Fin de Seccion Pie*/
