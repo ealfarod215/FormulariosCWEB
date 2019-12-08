@@ -1,0 +1,50 @@
+/**********************************************************/
+/*Se inicia trabajo en la pagina cursos*/
+h1 {
+    padding-top: 1rem;
+}
+
+#Formulario_Completo {
+    width : 100%;
+    height: 85%;
+}
+
+#Formulario_Curso {
+    height         : 90%;
+    display        : grid;
+    justify-content: center;
+    text-align     : center;
+    align-items    : center;
+}
+
+#Formulario_Curso input {
+    width      : 20rem;
+    padding-top: 0.5rem;
+}
+
+#Formulario_Curso select {
+
+    padding-top: 0.5rem;
+}
+
+
+
+
+p {
+    text-align  : justify;
+    margin-left : 30%;
+    margin-right: 30%;
+}
+
+
+.abajo {
+    display      : block;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+/********************************************************/
