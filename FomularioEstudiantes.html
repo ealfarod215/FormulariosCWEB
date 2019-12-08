@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="logica/CSS/CSSFE.css">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <!-- -->
+<ul id= "Puntos">
+    <li> <a href=""> <h2 class= "Menu"; id="Inicio">Inicio</h2> </a></li> 
+    <li> <a href="FomularioProfesores.html"><h2 class= "Menu"; id="Formulario_Profesores">Formulario Profesores</h2></a> </li> 
+  <li> <a href="FomularioCursos.html"> <h2 class= "Menu"; id="Formulario_Cursos">Formulario Cursos</h2> </a></li> 
+  <li> <a href=""><h2 class= "Menu"; id="Salir_del_Sistema">Salir del Sistema</h2></a> </li> 
+ </ul>
+<form action="logica/guardar.php" name="formulario" method="POST">
+    <div id="Formulario_Completo">
+        <h1 class= "Titulo", id="TituloId">Formulario Estudiante</h1>
+        <input type="submit" formenctype="text/plain"  name="registrarse" value="Registrar_estudiante"  id="BotonRegistrar"></button>
+        <div id="Formulario_Estudiante">
+            
+            <h4 id="Nombre_del_Estudiante">Nombre del Estudiante</h1> <!-- Letra nombre -->
+                <input type="text" name="Nombre_Estudiante" , id="Nombretxt"> <!-- Espacio para digitar -->
+                
+                <!--Espacios entre items para que no este pegado-->
+                <h4 id="Apellido1_del_Estudiante">Primer Apellido </h1>
+                    <!--Letra apellido1 -->
+                    <input type="text" name="Apellido1_Estudiante" , id="Apellido1txt">
+                    <!--Espacio para digitar -->
+                    
+                    <!--Espacios entre items para que no este pegado-->
+                    <h4 id="Apellido2_del_Estudiante">Segundo Apellido</h1>
+                        <!--Letra apellido2 -->
+                        <input type="text" name="Apellido2_Estudiante" , id="Apellido2txt">
+                        <!--Espacio para digitar -->
+                        
+                        <!--Espacios entre items para que no este pegado-->
+                        <h4 id="Curso_del_Estudiante">Curso Seleccionado</h1>
+                            <!--Letra Curso-->
+                            <select name="CursoCombobox" id="CursoCombobox">
+                                <!--Espacio para seleccionar -->
+                                <option value="Curso1">Curso1</option>
+                                <option value="Curso2">Curso2</option>
+                                <option value="Curso3">Curso3</option>
+                                <option value="Curso4">Curso4</option>
+                            </select>
+                            
+                            <!--Espacios entre items para que no este pegado-->
+                            <h4 id="Cedula_del_Estudiante">Número de Identificación</h1>
+                                <!--Letra Cedula -->
+                                <input type="text" name="Cedula_Estudiante" , id="Cedulatxt">
+                                <!--Espacio para digitar -->
+                                
+                                <!--Espacios entre items para que no este pegado-->
+                                <h4 id="Telefono_del_Estudiante">Teléfono móvil</h1>
+                                    <!--Letra telefono -->
+                                    <input type="text" name="Telefono" , id="Telefonotxt">
+                                    <!--Espacio para digitar -->
+
+                                    <!--Espacios entre items para que no este pegado-->
+                                    <h4 id="Correoelectronico_del_Estudiante">Correo electrónico</h1>
+                                        <!--Letra Correo electronico -->
+                                        <input type="text" name="Correo_Estudiante" , id="Correotxt">
+                                        <!--Espacio para digitar -->
+                                       
+                                        <!--Espacios entre items para que no este pegado-->
+                                        <h4 id="Direccion_del_Estudiante">Dirección de Residencia</h1>
+                                            <!--Letra Direccion -->
+                                            <textarea name="Direccion" rows="10"  cols="40" ,
+                                                id="Direcciontxt"></textarea>
+                                            <!--Espacio para digitar -->
+                                       
+                                              
+        
+                           </div>
+        <!--Fin del subdiv Estudiante-->
+        <p id="Informacion">La persona registrada Acepta los Terminos y Condiciones y haber leido la Politica de
+            Privacidad. La información de cada estudiante sera utilizada únicamente con el fin de conllevar un registro
+            activo para La Casa De La Cultura de Mora y dicha informacion ser utilizada si asi lo requiera.
+        </p>
+    </div>
+</form> 
+    <!--Fin del div completo -->
+</body>
+
+</html>
