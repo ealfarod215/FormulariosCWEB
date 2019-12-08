@@ -1,0 +1,133 @@
+    /*Se establece un tipo de letra para toda la pagina*/
+    
+    * {
+        font-family: 'Muli', sans-serif;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    /*Se establece caracteristicas basicas de la pagina*/
+    
+    body {
+        background: #ECB581;
+        margin: auto;
+        height: 1000px;
+    }
+    /*Tamaño para header y footer*/
+    
+    .HyFtamano {
+        width: 100%;
+    }
+    /*Se inicia trabajo de estilos en el header*/
+    
+    #Encabezado nav {
+        z-index: 2;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: rgba(78, 10, 1, 0.7);
+        width: 100%;
+    }
+    
+    #Encabezado nav ul {
+        display: flex;
+        justify-content: flex-end;
+        background: rgba(255, 255, 255, 0.26);
+        list-style: none;
+    }
+    
+    #Encabezado nav ul a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #Encabezado nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 2rem;
+        padding: 1rem;
+        margin: 0.7rem;
+        /*background   : rgba(0, 0, 0,0.7);*/
+        background: rgba(78, 10, 1, 0.7);
+        border-radius: 1rem;
+    }
+    
+    #Encabezado nav ul li:hover {
+        background: rgb(230, 114, 65);
+    }
+    
+    #cuerpo {
+        margin-top: 5%;
+    }
+    /******************************************************/
+    
+    #Activos {
+        background: rgba(255, 255, 255, 0.26);
+    }
+    
+    #Formulario_Estudiante {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .botonFormu {
+        display: grid;
+        align-self: center;
+        justify-content: center;
+    }
+    /*Inicio Seccion Pie*/
+    
+    #Pie {
+        bottom: 0;
+        height: 5rem;
+        justify-content: center;
+    }
+    
+    #Pie #contenido {
+        padding-top: 0.3rem;
+        padding-bottom: 1rem;
+        background: rgba(78, 10, 1, 0.7);
+        width: 100%;
+        height: 100%;
+    }
+    
+    #Pie #contenido nav {
+        margin-top: 1rem;
+        background: rgba(255, 255, 255, 0.26);
+        width: 100%;
+        height: 80%;
+    }
+    
+    #Pie nav ul {
+        display: flex;
+        background: rgba(255, 255, 255, 0.26);
+        list-style: none;
+    }
+    
+    #Pie nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33%;
+        height: 1.9rem;
+        margin: 0.1%;
+        padding: 1rem;
+        color: white;
+    }
+    
+    .contenedorIconos {
+        margin: 0.1rem;
+    }
+    
+    .cambiarcolor {
+        color: red;
+    }
+    /*Fin de Seccion Pie*/
