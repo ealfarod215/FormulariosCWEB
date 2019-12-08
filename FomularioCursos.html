@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/cursosStyle.css">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
     <title>Formularios</title>
 </head>
@@ -38,67 +39,69 @@
     <!-- -->
     <div id="cuerpo">
         <section id="Activos">
-            <form action="logica/guardar.php" name="formulario" method="POST">
-                <div id="Formulario_Completo">
-                    <h1 class="Titulo" , id="TituloId">Formulario Curso</h1>
-                    <input type="submit" , formenctype="text/plain" , value="Registrar Curso" ,
-                        id="BotonRegistrar"></button>
-                    <div id="Formulario_Curso">
+            <h1>Formulario Curso</h1>
+            <div id="Formulario_Completo">
+                <form id="Formulario_Curso" action="logica/guardar.php" name="formulario" method="POST">
 
-                        <h4 id="Nombre_del_Curso">Nombre del Curso</h1>
-                            <!-- Letra nombre -->
-                            <input type="text" name="Nombre_Curso" , id="Nombretxt">
-                            <!-- Espacio para digitar -->
+                    <label for="">Nombre del Curso</label>
+                    <!-- Letra nombre -->
+                    <input type="text" name="Nombre_Curso" , id="Nombretxt">
+                    <!-- Espacio para digitar -->
 
-                            <!--Espacios entre items para que no este pegado-->
-                            <h4 id="Nombre_del_Profesor">Nombre del Profesor</h1>
-                                <!--Letra Profesor -->
-                                <input type="text" name="Nombre_Profesor" , id="Profesortxt">
-                                <!--Espacio para digitar -->
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Nombre del Profesor</label>
 
-                                <!--Espacios entre items para que no este pegado-->
-                                <h4 id="Numero_de_Estudiantes">Numero de Estudiantes</h1>
-                                    <!--Letra numero-->
-                                    <input type="text" name="Numero_Estudiantes" , id="NumeroEstudiantestxt">
-                                    <!--Espacio para digitar -->
+                    <!--Letra Profesor -->
+                    <input type="text" name="Nombre_Profesor" , id="Profesortxt">
+                    <!--Espacio para digitar -->
 
-                                    <!--Espacios entre items para que no este pegado-->
-                                    <h4 id="Dia_de_Clase">Dia Seleccionado</h1>
-                                        <!--Letra Dia-->
-                                        <select id="DiaCombobox">
-                                            <!--Espacio para seleccionar -->
-                                            <option value="Dia1">Lunes</option>
-                                            <option value="Dia2">Martes</option>
-                                            <option value="Dia3">Miercoles</option>
-                                            <option value="Dia4">Jueves</option>
-                                            <option value="Dia5">Viernes</option>
-                                            <option value="Dia6">Sabado</option>
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Numero de Estudiantes</label>
+                    <!--Letra numero-->
+                    <input type="text" name="Numero_Estudiantes" , id="NumeroEstudiantestxt">
+                    <!--Espacio para digitar -->
 
-                                        </select>
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Dia Seleccionado</label>
+                    <!--Letra Dia-->
+                    <select id="DiaCombobox">
+                        <!--Espacio para seleccionar -->
+                        <option value="Dia1">Lunes</option>
+                        <option value="Dia2">Martes</option>
+                        <option value="Dia3">Miercoles</option>
+                        <option value="Dia4">Jueves</option>
+                        <option value="Dia5">Viernes</option>
+                        <option value="Dia6">Sabado</option>
 
-                                        <!--Espacios entre items para que no este pegado-->
-                                        <h4 id="Horario_del_Curso">Horario del Curso</h1>
-                                            <!--Letra Horario -->
-                                            <select id="HorarioCombobox">
-                                                <!--Espacio para seleccionar -->
-                                                <option value="Horario1">1:00pm-2:30pm</option>
-                                                <option value="Horario2">2:30pm-4:00pm</option>
-                                                <option value="Horario3">4:00pm-5:00pm</option>
-                                                <option value="Horario4">5:00pm-6:00pm</option>
-                                                <option value="Horario5">6:00pm-7:30pm</option>
-                                                <option value="Horario6">7:30pm-9:00pm</option>
+                    </select>
 
-                                            </select>
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Horario del Curso</label>
+                    <!--Letra Horario -->
+                    <select id="HorarioCombobox">
+                        <!--Espacio para seleccionar -->
+                        <option value="Horario1">1:00pm-2:30pm</option>
+                        <option value="Horario2">2:30pm-4:00pm</option>
+                        <option value="Horario3">4:00pm-5:00pm</option>
+                        <option value="Horario4">5:00pm-6:00pm</option>
+                        <option value="Horario5">6:00pm-7:30pm</option>
+                        <option value="Horario6">7:30pm-9:00pm</option>
 
-                    </div>
+                    </select>
+
                     <!--Fin del subdiv Curso-->
-                    <p id="Informacion">El encargado del curso registrado Acepta los Terminos y Condiciones y haber
+                    <input type="submit" , formenctype="text/plain" , value="Registrar Curso" , id="BotonRegistrar">
+                   
+                </form>
+                <p id="Informacion">
+                        El encargado del curso registrado Acepta los Terminos y Condiciones y haber
                         leido la Politica de Privacidad. La información de cada curso sera utilizada únicamente con el
                         fin de conllevar un registro activo para La Casa De La Cultura
                         de Mora y dicha informacion ser utilizada si asi lo requiera.
                     </p>
-                </div>
-            </form>
+            </div>
+
+
         </section>
 
     </div>
