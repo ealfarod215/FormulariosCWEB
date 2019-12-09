@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/EstuStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
@@ -39,75 +40,82 @@
     <!-- -->
     <div id="cuerpo">
         <section id="Activos">
-            <form action="logica/guardar.php" name="formulario" method="POST">
-                <div id="Formulario_Completo">
-                    <div class="botonFormu">
-                        <h1 class="Titulo" , id="TituloId">Formulario Estudiante</h1>
-                        <input type="submit" formenctype="text/plain" name="registrarse" value="Registrar_estudiante" id="BotonRegistrar"></button>
-                    </div>
-                    <div id="Formulario_Estudiante">
+            <h1 class="Titulo" , id="TituloId">Formulario Estudiante</h1>
+            <div id="Formulario_Completo">
+                <form id="Formulario_Estudiante" action="logica/guardar.php" name="formulario" method="POST">
+                    <label for="">Nombre del Estudiante</label>
+                    <!-- Letra nombre -->
+                    <input type="text" name="Nombre_Estudiante" , id="Nombretxt">
+                    <!-- Espacio para digitar -->
 
-                        <h4 id="Nombre_del_Estudiante">Nombre del Estudiante</h1>
-                            <!-- Letra nombre -->
-                            <input type="text" name="Nombre_Estudiante" , id="Nombretxt">
-                            <!-- Espacio para digitar -->
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Primer Apellido</label>
+                    <!--Letra apellido1 -->
+                    <input type="text" name="Apellido1_Estudiante" , id="Apellido1txt">
+                    <!--Espacio para digitar -->
 
-                            <!--Espacios entre items para que no este pegado-->
-                            <h4 id="Apellido1_del_Estudiante">Primer Apellido </h1>
-                                <!--Letra apellido1 -->
-                                <input type="text" name="Apellido1_Estudiante" , id="Apellido1txt">
-                                <!--Espacio para digitar -->
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Segundo Apellido</label>
+                    <!--Letra apellido2 -->
+                    <input type="text" name="Apellido2_Estudiante" , id="Apellido2txt">
+                    <!--Espacio para digitar -->
 
-                                <!--Espacios entre items para que no este pegado-->
-                                <h4 id="Apellido2_del_Estudiante">Segundo Apellido</h1>
-                                    <!--Letra apellido2 -->
-                                    <input type="text" name="Apellido2_Estudiante" , id="Apellido2txt">
-                                    <!--Espacio para digitar -->
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Curso Seleccionado</label>
+                    <!--Letra Curso-->
+                    <select name="CursoCombobox" id="CursoCombobox">
+                        <!--Espacio para seleccionar -->
+                        <option value="Curso1">Curso1</option>
+                        <option value="Curso2">Curso2</option>
+                        <option value="Curso3">Curso3</option>
+                        <option value="Curso4">Curso4</option>
+                    </select>
 
-                                    <!--Espacios entre items para que no este pegado-->
-                                    <h4 id="Curso_del_Estudiante">Curso Seleccionado</h1>
-                                        <!--Letra Curso-->
-                                        <select name="CursoCombobox" id="CursoCombobox">
-                                            <!--Espacio para seleccionar -->
-                                            <option value="Curso1">Curso1</option>
-                                            <option value="Curso2">Curso2</option>
-                                            <option value="Curso3">Curso3</option>
-                                            <option value="Curso4">Curso4</option>
-                                        </select>
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Número de Identificación</label>
+                    <!--Letra Cedula -->
+                    <input type="text" name="Cedula_Estudiante" , id="Cedulatxt">
+                    <!--Espacio para digitar -->
 
-                                        <!--Espacios entre items para que no este pegado-->
-                                        <h4 id="Cedula_del_Estudiante">Número de Identificación</h1>
-                                            <!--Letra Cedula -->
-                                            <input type="text" name="Cedula_Estudiante" , id="Cedulatxt">
-                                            <!--Espacio para digitar -->
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Teléfono móvil</label>
+                    <!--Letra telefono -->
+                    <input type="text" name="Telefono" , id="Telefonotxt">
+                    <!--Espacio para digitar -->
 
-                                            <!--Espacios entre items para que no este pegado-->
-                                            <h4 id="Telefono_del_Estudiante">Teléfono móvil</h1>
-                                                <!--Letra telefono -->
-                                                <input type="text" name="Telefono" , id="Telefonotxt">
-                                                <!--Espacio para digitar -->
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Correo electrónico</label>
+                    <!--Letra Correo electronico -->
+                    <input type="text" name="Correo_Estudiante" , id="Correotxt">
+                    <!--Espacio para digitar -->
 
-                                                <!--Espacios entre items para que no este pegado-->
-                                                <h4 id="Correoelectronico_del_Estudiante">Correo electrónico</h1>
-                                                    <!--Letra Correo electronico -->
-                                                    <input type="text" name="Correo_Estudiante" , id="Correotxt">
-                                                    <!--Espacio para digitar -->
+                    <!--Espacios entre items para que no este pegado-->
+                    <label for="">Dirección de Residencia</label>
+                    <!--Letra Direccion -->
+                    <textarea name="Direccion" rows="10" cols="40" , id="Direcciontxt"></textarea>
+                    <!--Espacio para digitar -->
 
-                                                    <!--Espacios entre items para que no este pegado-->
-                                                    <h4 id="Direccion_del_Estudiante">Dirección de Residencia</h1>
-                                                        <!--Letra Direccion -->
-                                                        <textarea name="Direccion" rows="10" cols="40" , id="Direcciontxt"></textarea>
-                                                        <!--Espacio para digitar -->
+                    <input type="submit" formenctype="text/plain" name="registrarse" value="Registrar_estudiante"
+                        id="BotonRegistrar">
+                    <input type="submit" formenctype="text/plain" name="eliminarEstudiante" value="Eliminar_estudiante"
+                        id="BotonEliminar">
+                    <input type="submit" formenctype="text/plain" name="modificarEstudiante"
+                        value="Modificar_estudiante" id="BotonModificar">
+
+                </form>
+
+                <p id="Informacion">
+                    La persona registrada Acepta los Terminos y Condiciones y haber leido la
+                    Politica de Privacidad. La información de cada estudiante sera utilizada únicamente con el fin
+                    de conllevar un registro activo para La Casa De La Cultura de Mora
+                    y dicha informacion ser utilizada si asi lo requiera.
+                </p>
+
+            </div>
 
 
 
-                    </div>
-                    <!--Fin del subdiv Estudiante-->
-                    <p id="Informacion">La persona registrada Acepta los Terminos y Condiciones y haber leido la Politica de Privacidad. La información de cada estudiante sera utilizada únicamente con el fin de conllevar un registro activo para La Casa De La Cultura de Mora
-                        y dicha informacion ser utilizada si asi lo requiera.
-                    </p>
-                </div>
-            </form>
+
         </section>
 
     </div>

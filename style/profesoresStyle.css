@@ -9,7 +9,7 @@
     }
 
 
-    #Formulario_Estudiante {
+    #Formulario_Profesor {
         height         : 90%;
         display        : grid;
         justify-content: center;
@@ -22,23 +22,21 @@
 
     }
 
-    #Formulario_Estudiante input {
+    #Formulario_Profesor input {
         width      : 20rem;
         margin-top : 0.5rem;
         padding-top: 0.5rem;
     }
 
-    #Formulario_Estudiante select {
+    #Formulario_Profesor select {
         margin-top : 0.5rem;
         padding-top: 0.5rem;
     }
-
-
-
 
     p {
         text-align  : justify;
         margin-left : 30%;
         margin-right: 30%;
+
     }
 /***************************************************************************************************/
