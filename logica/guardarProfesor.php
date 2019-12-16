@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "realp132413";
 $dbname = "bd_casacultura";
 $Nombre=$_POST["Nombre_Profesor"];
 $Apellido1=$_POST["Apellido1_Profesor"];

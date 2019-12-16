@@ -1,4 +1,4 @@
-<?php $conexion = mysqli_connect("localhost", "root", "", "bd_casacultura"); ?>
+<?php $conexion = mysqli_connect("localhost", "root", "realp132413", "bd_casacultura"); ?>
 <!DOCTYPE html>
 <html lang="es">
 
