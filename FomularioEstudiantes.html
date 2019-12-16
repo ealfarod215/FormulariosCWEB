@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+    <link rel="" type="text/css" href="logica/CSS/CSSFE.css" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -29,7 +31,7 @@
                             <ul>
                                 <li class="listaMenu"><a href="FomularioEstudiantes.html">Inicio</a> </li>
                                 <li class="listaMenu"><a href="FomularioCursos.html">Cursos</a></li>
-                                <li class="listaMenu"><a href="FomularioProfesores.html">Profesores</a> </li>
+                                <li class="listaMenu"><a href="FomularioProfesores.php">Profesores</a> </li>
                             </ul>
                         </nav>
                     </div>
@@ -42,65 +44,34 @@
         <section id="Activos">
             <h1 class="Titulo" , id="TituloId">Formulario Estudiante</h1>
             <div id="Formulario_Completo">
-                <form id="Formulario_Estudiante" action="logica/guardar.php" name="formulario" method="POST">
+                <form id="Formulario_Estudiante" action="logica/guardarEstudiantes.php" name="formulario" method="post">
                     <label for="">Nombre del Estudiante</label>
-                    <!-- Letra nombre -->
-                    <input type="text" name="Nombre_Estudiante" , id="Nombretxt">
-                    <!-- Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Nombre_Estudiante" id="Nombretxt">
                     <label for="">Primer Apellido</label>
-                    <!--Letra apellido1 -->
-                    <input type="text" name="Apellido1_Estudiante" , id="Apellido1txt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Apellido1_Estudiante" id="Apellido1txt">
                     <label for="">Segundo Apellido</label>
-                    <!--Letra apellido2 -->
-                    <input type="text" name="Apellido2_Estudiante" , id="Apellido2txt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Apellido2_Estudiante" id="Apellido2txt">
                     <label for="">Curso Seleccionado</label>
-                    <!--Letra Curso-->
                     <select name="CursoCombobox" id="CursoCombobox">
-                        <!--Espacio para seleccionar -->
                         <option value="Curso1">Curso1</option>
                         <option value="Curso2">Curso2</option>
                         <option value="Curso3">Curso3</option>
                         <option value="Curso4">Curso4</option>
                     </select>
 
-                    <!--Espacios entre items para que no este pegado-->
                     <label for="">Número de Identificación</label>
-                    <!--Letra Cedula -->
-                    <input type="text" name="Cedula_Estudiante" , id="Cedulatxt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Cedula_Estudiante" id="Cedulatxt">
                     <label for="">Teléfono móvil</label>
-                    <!--Letra telefono -->
-                    <input type="text" name="Telefono" , id="Telefonotxt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Telefono" id="Telefonotxt">
                     <label for="">Correo electrónico</label>
-                    <!--Letra Correo electronico -->
-                    <input type="text" name="Correo_Estudiante" , id="Correotxt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Correo_Estudiante" id="Correotxt">
                     <label for="">Dirección de Residencia</label>
-                    <!--Letra Direccion -->
-                    <textarea name="Direccion" rows="10" cols="40" , id="Direcciontxt"></textarea>
-                    <!--Espacio para digitar -->
+                    <textarea name="Direccion" rows="10" cols="40" id="Direcciontxt"></textarea>
 
-                    <input type="submit" formenctype="text/plain" name="registrarse" value="Registrar_estudiante"
+
+                    <input type="submit"  name="registrarse" value="Registrar_estudiante"
                         id="BotonRegistrar">
-                    <input type="submit" formenctype="text/plain" name="eliminarEstudiante" value="Eliminar_estudiante"
-                        id="BotonEliminar">
-                    <input type="submit" formenctype="text/plain" name="modificarEstudiante"
-                        value="Modificar_estudiante" id="BotonModificar">
+                    
 
                 </form>
 

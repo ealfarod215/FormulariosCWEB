@@ -1,7 +1,10 @@
+<?php $conexion = mysqli_connect("localhost", "root", "", "bd_casacultura"); ?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+    <link rel="" type="text/css" href="logica/CSS/CSSFP.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -41,56 +44,38 @@
             <h1 class="Titulo" , id="TituloId">Formulario Profesor</h1>
 
             <div id="Formulario_Completo">
-                <form id="Formulario_Profesor" action="logica/guardar.php" name="formulario" method="POST">
+                <form id="Formulario_Profesor" action="logica/guardarProfesor.php" name="formulario" method="post">
 
                     <label for="">Nombre del Profesor</label>
-                    <!-- Letra nombre -->
-                    <input type="text" name="Nombre_Profesor" , id="Nombretxt">
-                    <!-- Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Nombre_Profesor" id="Nombretxt">
                     <label for="">Primer Apellido</label>
-                    <!--Letra apellido1 -->
-                    <input type="text" name="Apellido1_Profesor" , id="Apellido1txt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Apellido1_Profesor" id="Apellido1txt">
                     <label for="">Segundo Apellido</label>
-                    <!--Letra apellido2 -->
-                    <input type="text" name="Apellido2_Profesor" , id="Apellido2txt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
+                    <input type="text" name="Apellido2_Profesor" id="Apellido2txt">
                     <label for="">Curso Seleccionado</label>
-                    <!--Letra Curso-->
-                    <select id="CursoCombobox">
-                        <!--Espacio para seleccionar -->
-                        <option value="Curso1">Guitarra</option>
-                        <option value="Curso2">Piano</option>
-                        <option value="Curso3">Saxofon</option>
-                        <option value="Curso4">Canto</option>
+                    <select id="CursoCombobox" name="Cursos_Profesor">
+                        <?php
+                        $sql = "SELECT nombre, codigo_curso FROM curso";
+                        $rec = mysqli_query($conexion, $sql);
+                        while ($row = mysqli_fetch_array($rec)) {
+                            ?>
+
+                            <option value="<?php echo $row['codigo_curso'] ?>"><?php echo $row['nombre'] ?></option>
+
+                        <?php
+                        }
+                        ?>
                     </select>
 
-                    <!--Espacios entre items para que no este pegado-->
                     <label for="">Número de Identificación</label>
-                    <!--Letra Cedula -->
                     <input type="text" name="Cedula_Profesor" , id="Cedulatxt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
                     <label for="">Teléfono móvil</label>
-                    <!--Letra telefono -->
                     <input type="text" name="Telefono" , id="Telefonotxt">
-                    <!--Espacio para digitar -->
-
-                    <!--Espacios entre items para que no este pegado-->
                     <label for="">Dirección de Residencia</label>
-                    <!--Letra Direccion -->
                     <textarea name="Direccion" rows="10" cols="40" , id="Direcciontxt"></textarea>
-                    <!--Fin del subdiv Profesor-->
-                    <input type="submit" , formenctype="text/plain" , value="Registrar docente" , id="BotonRegistrar">
-                    <input type="submit" , formenctype="text/plain" , value="Eliminar docente" , id="BotonEliminar">
-                    <input type="submit" , formenctype="text/plain" , value="Modificar docente" , id="BotonModificar">
+
+                    <input type="submit" value="Registrar docente" id="BotonRegistrar">
+                    
 
 
                 </form>
@@ -124,8 +109,7 @@
                             <p class="contenedorIconos">Encuentre más en:</p>
                             <a href="https://www.facebook.com/CasaCulturaMora/?ref=br_rs"><i class="fab fa-facebook">
                                 </i></a>
-                            <a class="cambiarcolor" href="https://www.youtube.com/channel/UCIm9gyNg1kmIUYpPsCregew"><i
-                                    class="fab fa-youtube"></i></a>
+                            <a class="cambiarcolor" href="https://www.youtube.com/channel/UCIm9gyNg1kmIUYpPsCregew"><i class="fab fa-youtube"></i></a>
                         </div>
                     </li>
                 </ul>
