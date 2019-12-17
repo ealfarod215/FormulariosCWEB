@@ -31,7 +31,7 @@
                     <div>
                         <nav>
                             <ul>
-                            <li class="listaMenu"><a href="Menu.html">Inicio</a> </li>
+                                <li class="listaMenu"><a href="Menu.html">Inicio</a> </li>
                                 <li class="listaMenu"><a href="ModificarEstudiantes.php">Modificar Estudiante</a></li>
                                 <li class="listaMenu"><a href="EliminarEstudiantes.php">Eliminar Estudiante</a> </li>
                             </ul>

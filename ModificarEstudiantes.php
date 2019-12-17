@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="style/EstuStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/formulariostamanio.css">
     <title>Modificar Estudiante</title>
 </head>
 
 <!---->
 
-<body>
+<body id="MfEstudiante">
     <header id="Encabezado" class="HyFtamano">
 
         <div class="menu-wrap">

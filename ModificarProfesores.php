@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="style/profesoresStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/formulariostamanio.css">
     <title>Modificar Profesor</title>
 </head>
 
-<body>
+<body id="MfProfesores">
     <header id="Encabezado" class="HyFtamano">
 
         <div class="menu-wrap">
@@ -43,7 +44,6 @@
     <div id="cuerpo">
         <section id="Activos">
             <h1 class="Titulo" , id="TituloId">Modificar Profesor</h1>
-            <p>Para modificar la información de un profesor se debe de ingresar su numero de identificación.</p>
             <div id="Formulario_Completo">
                 <form id="Formulario_Profesor" action="logica/LogicaModificarProfesor.php" name="formulario" method="post">
                     <label for="">Número de Identificación</label>

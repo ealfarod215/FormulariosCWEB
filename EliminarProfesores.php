@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="style/profesoresStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/formulariostamanio.css">
+
     <title>Eliminar Profesor</title>
 </head>
 
-<body>
+<body id="ELProfesores">
     <header id="Encabezado" class="HyFtamano">
 
         <div class="menu-wrap">
@@ -43,7 +45,6 @@
     <div id="cuerpo">
         <section id="Activos">
             <h1 class="Titulo"  id="TituloId">Eliminar Profesor</h1>
-            <p>Para eliminar la información de un profesor se debe de ingresar su número de identificación.</p>
             <div id="Formulario_Completo">
                 <form id="Formulario_Profesor" action="logica/LogicaEliminarProfesor.php" name="formulario" method="post">
                     <label for="">Número de Identificación</label>
