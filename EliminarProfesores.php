@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style/profesoresStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
-    <title>Ingresar Profesor</title>
+    <title>Eliminar Profesor</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
                         <nav>
                             <ul>
                             <li class="listaMenu"><a href="Menu.html">Inicio</a> </li>
-                                <li class="listaMenu"><a href="EliminarProfesores.php">Eliminar Profesor</a> </li>
-                                <li class="listaMenu"><a href="ModificarProfesores.php">Modificar Profesores</a></li>
+                                <li class="listaMenu"><a href="FomularioProfesores.php">Ingresar Profesor</a> </li>
+                                <li class="listaMenu"><a href="ModificarProfesores.php">Modificar Profesor</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -42,52 +42,19 @@
     <!-- -->
     <div id="cuerpo">
         <section id="Activos">
-            <h1 class="Titulo" , id="TituloId">Ingresar Profesor</h1>
-            p
-
+            <h1 class="Titulo"  id="TituloId">Eliminar Profesor</h1>
+            <p>Para eliminar la información de un profesor se debe de ingresar su número de identificación.</p>
             <div id="Formulario_Completo">
-                <form id="Formulario_Profesor" action="logica/guardarProfesor.php" name="formulario" method="post">
-
-                    <label for="">Nombre del Profesor</label>
-                    <input type="text" name="Nombre_Profesor" id="Nombretxt">
-                    <label for="">Primer Apellido</label>
-                    <input type="text" name="Apellido1_Profesor" id="Apellido1txt">
-                    <label for="">Segundo Apellido</label>
-                    <input type="text" name="Apellido2_Profesor" id="Apellido2txt">
-                    <label for="">Curso Seleccionado</label>
-                    <select id="CursoCombobox" name="Cursos_Profesor">
-                        <?php
-                        $sql = "SELECT nombre, codigo_curso FROM curso";
-                        $rec = mysqli_query($conexion, $sql);
-                        while ($row = mysqli_fetch_array($rec)) {
-                            ?>
-
-                            <option value="<?php echo $row['codigo_curso'] ?>"><?php echo $row['nombre'] ?></option>
-
-                        <?php
-                        }
-                        ?>
-                    </select>
-
+                <form id="Formulario_Profesor" action="logica/LogicaEliminarProfesor.php" name="formulario" method="post">
                     <label for="">Número de Identificación</label>
                     <input type="text" name="Cedula_Profesor"  id="Cedulatxt">
-                    <label for="">Teléfono móvil</label>
-                    <input type="text" name="Telefono"  id="Telefonotxt">
-                    <label for="">Correo electronico</label>
-                    <input type="text" name="Correo_profesor"  id="Correotxt">
-                    <label for="">Dirección de Residencia</label>
-                    <textarea name="Direccion" rows="10" cols="40"  id="Direcciontxt"></textarea>
-
-                    <input type="submit" value="Registrar profesor" id="BotonRegistrar">
-                    
-
-
+                    <input type="submit" value="Eliminar profesor" id="BotonRegistrar">
                 </form>
                 <p id="Informacion">
-                    La persona registrada Acepta los Terminos y Condiciones y haber leido la
-                    Politica de Privacidad. La información de cada docente sera utilizada únicamente con el fin de
-                    conllevar un registro activo para La Casa De La Cultura de Mora
-                    y dicha informacion ser utilizada si asi lo requiera.
+                La persona encargada de eliminar los datos del profesor seleccionado debe de tener en cuenta que estos datos no podrán ser
+                recuperados. De esta manera acepta la responsabilidad de eliminar todo registro que se encuentre sobre el 
+                profesor en el sistema. 
+                Se eliminará al profesor de sistema luego de que este haya sido apartado de sus labores en la casa cultural.
                 </p>
             </div>
 

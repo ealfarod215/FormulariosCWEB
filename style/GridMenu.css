@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    grid-column-gap: 50px;
+  }
+ .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .MenuBtn {
+    background-color:rgba(78, 10, 1); 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 150px;
+  }
+  .MenuBtn:hover {
+    background-color: rgb(230, 114, 65);
+  }

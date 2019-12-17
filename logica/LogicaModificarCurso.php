@@ -4,9 +4,7 @@ $username = "root";
 $password = "realp132413";
 $dbname = "bd_casacultura";
 $Codigo=$_POST["Codigo_Curso"];
-$Nombre=$_POST["Nombre_Curso"];
 $NumeroMax=$_POST["Numero_Max_Cupos"];
-$NumeroMin=$_POST["Numero_Min_Cupos"];
 $Dia=$_POST["Dia"];
 $Horario=$_POST["Horario_Curso"];
 
@@ -18,11 +16,11 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
 }
     // verificar que el profesor Exista
-	$sql = "INSERT INTO Curso VALUES ('$Codigo', '$Nombre','$NumeroMax', '$NumeroMin', '$Dia', '$Horario')";
+	$sql = "UPDATE curso SET maximo_cupos='$NumeroMax', dia='$Dia', horario='$Horario' WHERE codigo_curso='$Codigo'";
 
 	if ($conn->query($sql) === TRUE) {
     	echo '<script>
-        alert("Curso Agregado");
+        alert("Curso Modificado");
         window.history.go(-1);
         location=location;
         </script>';

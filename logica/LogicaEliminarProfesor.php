@@ -3,14 +3,8 @@ $servername = "localhost";
 $username = "root";
 $password = "realp132413";
 $dbname = "bd_casacultura";
-$Nombre=$_POST["Nombre_Profesor"];
-$Apellido1=$_POST["Apellido1_Profesor"];
-$Apellido2=$_POST["Apellido2_Profesor"];
 $Cedula=$_POST["Cedula_Profesor"];
-$Curso=$_POST["Cursos_Profesor"];
-$Telefonoo=$_POST["Telefono"];
-$Correo=$_POST["Correo_profesor"];
-$Direccioon=$_POST["Direccion"];
+
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,11 +13,11 @@ if ($conn->connect_error)
 {
     die("Connection failed: " . $conn->connect_error);
 }
-	$sql1 = "INSERT INTO profesor VALUES ('$Cedula', '$Nombre', '$Apellido1', '$Apellido2', '$Direccioon', '$Telefonoo', '$Correo')";
-    $sql2 = "INSERT INTO imparte VALUES ('$Cedula', '$Curso')";
-	if (($conn->query($sql1) == TRUE)&& ($conn->query($sql2) == TRUE)) {
+	$sql1 = "DELETE FROM profesor WHERE cedula ='$Cedula'";
+    $sql2 = "DELETE FROM imparte WHERE profesor_cedula= '$Cedula'";
+	if (($conn->query($sql2) == TRUE)&& ($conn->query($sql1) == TRUE)) {
     	echo '<script>
-        alert("Profesor Agregado");
+        alert("Profesor Eliminado");
         window.history.go(-1);
         location=location;
         </script>';

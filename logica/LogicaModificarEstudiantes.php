@@ -3,9 +3,6 @@ $servername = "localhost";
 $username = "root";
 $password = "realp132413";
 $dbname = "bd_casacultura";
-$Nombre=$_POST["Nombre_Estudiante"];
-$Apellido1=$_POST["Apellido1_Estudiante"];
-$Apellido2=$_POST["Apellido2_Estudiante"];
 $Cedula=$_POST["Cedula_Estudiante"];
 $Correo=$_POST["Correo_Estudiante"];
 $Curso=$_POST["Cursos_Estudiante"];
@@ -19,18 +16,18 @@ if ($conn->connect_error)
 {
     die("Connection failed: " . $conn->connect_error);
 }
-    $sql1 = "INSERT INTO estudiante VALUES ('$Cedula', '$Nombre', '$Apellido1', '$Apellido2', '$Direccioon', '$Telefonoo', '$Correo')";
-    $sql2 = "INSERT INTO asigna VALUES ('$Cedula', '$Curso')";
+    $sql1 = "UPDATE estudiante SET direccion='$Direccioon', numero_telefono='$Telefonoo', correo_electronico='$Correo' WHERE cedula='$Cedula'";
+    $sql2 = "UPDATE asigna SET curso_codigo_curso='$Curso' WHERE estudiante_cedula='$Cedula'";
 
 	if (($conn->query($sql1) === TRUE)&&($conn->query($sql2) == TRUE)) {
     	echo '<script>
-        alert("Estudiante Agregado");
+        alert("Estudiante Modificado");
         window.history.go(-1);
         location=location;
         </script>';
 	} else {
     	echo "Error: " . $sql1 . "<br>" . $conn->error;
-        
+        echo "Error: " . $sql2 . "<br>" . $conn->error;
 	}
 $conn->close();
 ?>

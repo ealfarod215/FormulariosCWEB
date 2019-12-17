@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/cursosStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
-    <title>Registrar curso</title>
+    <title>Modificar Curso</title>
 </head>
 
 <!-- -->
@@ -31,8 +31,8 @@
                         <nav>
                             <ul>
                                 <li class="listaMenu"><a href="Menu.html">Inicio</a> </li>
-                                <li class="listaMenu"><a href="EliminarCursos.html">Eliminar Curso</a> </li>
-                                <li class="listaMenu"><a href="ModificarCursos.html">Modificar Curso</a></li>
+                                <li class="listaMenu"><a href="FomularioCursos.html">Ingresar Curso</a> </li>
+                                <li class="listaMenu"><a href="EliminarCursos.html">Eliminar Curso</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -43,27 +43,23 @@
     <!-- -->
     <div id="cuerpo">
         <section id="Activos">
-            <h1>Registrar Curso</h1>
+            <h1>Modificar Curso</h1>
+            <p>Para modificar la información el curso se debe de conocer su código de curso.</p>
             <div id="Formulario_Completo">
-                <form id="Formulario_Curso" action="logica/guardarCurso.php" name="formulario" method="post">
+                <form id="Formulario_Curso" action="logica/LogicaModificarCurso.php" name="formulario" method="post">
 
                     <label for="">Código del Curso</label>
                     <input type="text" name="Codigo_Curso" id="Codigotxt">
-                    <label for="">Nombre del Curso</label>
-                    <input type="text" name="Nombre_Curso" id="Nombretxt">
-                    <label for="">Máximo de Cupos</label>
+                    <label for="">Maximo de Cupos</label>
                     <input type="text" name="Numero_Max_Cupos" id="NumeroMaxCupostxt">
-                    <label for="">Mínimo de Cupos</label>
-                    <input type="text" name="Numero_Min_Cupos" id="NumeroMinCupostxt">
-
                     <label for="">Día Seleccionado</label>
                     <select id="DiaCombobox" name="Dia">
                         <option value="Lunes">Lunes</option>
                         <option value="Martes">Martes</option>
-                        <option value="Miercoles">Miércoles</option>
+                        <option value="Miercoles">Miercoles</option>
                         <option value="Jueves">Jueves</option>
                         <option value="Viernes">Viernes</option>
-                        <option value="Sabado">Sábado</option>
+                        <option value="Sabado">Sabado</option>
                     </select>
 
                     <label for="">Horario del Curso</label>
@@ -76,15 +72,15 @@
                         <option value="G">7:30pm-9:00pm</option>
                     </select>
 
-                    <input type="submit"  value="Registrar Curso" id="BotonRegistrar">
+                    <input type="submit"  value="Modificar Curso" id="BotonRegistrar">
                     
 
 
                 </form>
                 <p id="Informacion">
-                    El encargado del sistema de registrado acepta los términos y condiciones, además de haber leído la política de
-                    privacidad. La información de cada curso será utilizada únicamente con el fin de conllevar un
-                    registro activo para La Casa De La Cultura de Mora y dicha información ser utilizada si así lo requiera.
+                    El encargado del sistema de registrado acepta la responsabilidad de modificar información crucial sobre los cursos,
+                    además de tener en cuenta el hecho de que una vez cambiada la información no puede ser recuperada debido a que el sistema
+                    no tiene un método para deshacer los cambios realizados.
                 </p>
             </div>
 

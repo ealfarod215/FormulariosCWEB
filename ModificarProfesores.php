@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style/profesoresStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
-    <title>Ingresar Profesor</title>
+    <title>Modificar Profesor</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
                         <nav>
                             <ul>
                             <li class="listaMenu"><a href="Menu.html">Inicio</a> </li>
-                                <li class="listaMenu"><a href="EliminarProfesores.php">Eliminar Profesor</a> </li>
-                                <li class="listaMenu"><a href="ModificarProfesores.php">Modificar Profesores</a></li>
+                                <li class="listaMenu"><a href="FomularioProfesores.php">Eliminar Estudiante</a> </li>
+                                <li class="listaMenu"><a href="EliminarProfesores.php">Eliminar Profesor</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -42,19 +42,15 @@
     <!-- -->
     <div id="cuerpo">
         <section id="Activos">
-            <h1 class="Titulo" , id="TituloId">Ingresar Profesor</h1>
-            p
-
+            <h1 class="Titulo" , id="TituloId">Modificar Profesor</h1>
+            <p>Para modificar la información de un profesor se debe de ingresar su numero de identificación.</p>
             <div id="Formulario_Completo">
-                <form id="Formulario_Profesor" action="logica/guardarProfesor.php" name="formulario" method="post">
+                <form id="Formulario_Profesor" action="logica/LogicaModificarProfesor.php" name="formulario" method="post">
+                    <label for="">Número de Identificación</label>
+                    <input type="text" name="Cedula_Profesor"  id="Cedulatxt">
 
-                    <label for="">Nombre del Profesor</label>
-                    <input type="text" name="Nombre_Profesor" id="Nombretxt">
-                    <label for="">Primer Apellido</label>
-                    <input type="text" name="Apellido1_Profesor" id="Apellido1txt">
-                    <label for="">Segundo Apellido</label>
-                    <input type="text" name="Apellido2_Profesor" id="Apellido2txt">
-                    <label for="">Curso Seleccionado</label>
+
+                    <label for="">Nuevo curso a enseñar</label>
                     <select id="CursoCombobox" name="Cursos_Profesor">
                         <?php
                         $sql = "SELECT nombre, codigo_curso FROM curso";
@@ -69,13 +65,12 @@
                         ?>
                     </select>
 
-                    <label for="">Número de Identificación</label>
-                    <input type="text" name="Cedula_Profesor"  id="Cedulatxt">
-                    <label for="">Teléfono móvil</label>
+                    
+                    <label for="">Nuevo número telefónico</label>
                     <input type="text" name="Telefono"  id="Telefonotxt">
-                    <label for="">Correo electronico</label>
-                    <input type="text" name="Correo_profesor"  id="Correotxt">
-                    <label for="">Dirección de Residencia</label>
+                    <label for="">Nuevo correo electrónico</label>
+                    <input type="text" name="Correo_Profesor"  id="Correotxt">
+                    <label for="">Nueva dirección residencial</label>
                     <textarea name="Direccion" rows="10" cols="40"  id="Direcciontxt"></textarea>
 
                     <input type="submit" value="Registrar profesor" id="BotonRegistrar">
@@ -84,10 +79,9 @@
 
                 </form>
                 <p id="Informacion">
-                    La persona registrada Acepta los Terminos y Condiciones y haber leido la
-                    Politica de Privacidad. La información de cada docente sera utilizada únicamente con el fin de
-                    conllevar un registro activo para La Casa De La Cultura de Mora
-                    y dicha informacion ser utilizada si asi lo requiera.
+                    El encargado del sistema de registrado acepta la responsabilidad de modificar información crucial sobre los profesores,
+                    además de tener en cuenta el hecho de que una vez cambiada la información no puede ser recuperada debido a que el sistema
+                    no tiene un método para deshacer los cambios realizados.
                 </p>
             </div>
 

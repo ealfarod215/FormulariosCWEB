@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/cursosStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a7b3b1445.js" crossorigin="anonymous"></script>
-    <title>Registrar curso</title>
+    <title>Eliminar Curso</title>
 </head>
 
 <!-- -->
@@ -31,7 +31,7 @@
                         <nav>
                             <ul>
                                 <li class="listaMenu"><a href="Menu.html">Inicio</a> </li>
-                                <li class="listaMenu"><a href="EliminarCursos.html">Eliminar Curso</a> </li>
+                                <li class="listaMenu"><a href="FomularioCursos.html">Ingresar Curso</a> </li>
                                 <li class="listaMenu"><a href="ModificarCursos.html">Modificar Curso</a></li>
                             </ul>
                         </nav>
@@ -43,48 +43,23 @@
     <!-- -->
     <div id="cuerpo">
         <section id="Activos">
-            <h1>Registrar Curso</h1>
+            <h1>Eliminar Curso</h1>
+            <p>Para eliminar el curso se debe de conocer su código de curso.</p>
             <div id="Formulario_Completo">
-                <form id="Formulario_Curso" action="logica/guardarCurso.php" name="formulario" method="post">
+                <form id="Formulario_Curso" action="logica/LogicaEliminarCurso.php" name="formulario" method="post">
 
-                    <label for="">Código del Curso</label>
-                    <input type="text" name="Codigo_Curso" id="Codigotxt">
-                    <label for="">Nombre del Curso</label>
-                    <input type="text" name="Nombre_Curso" id="Nombretxt">
-                    <label for="">Máximo de Cupos</label>
-                    <input type="text" name="Numero_Max_Cupos" id="NumeroMaxCupostxt">
-                    <label for="">Mínimo de Cupos</label>
-                    <input type="text" name="Numero_Min_Cupos" id="NumeroMinCupostxt">
+                    <label for="">código del Curso</label>
+                    <input type="text" name="Codigo" id="Codigotxt">
 
-                    <label for="">Día Seleccionado</label>
-                    <select id="DiaCombobox" name="Dia">
-                        <option value="Lunes">Lunes</option>
-                        <option value="Martes">Martes</option>
-                        <option value="Miercoles">Miércoles</option>
-                        <option value="Jueves">Jueves</option>
-                        <option value="Viernes">Viernes</option>
-                        <option value="Sabado">Sábado</option>
-                    </select>
-
-                    <label for="">Horario del Curso</label>
-                    <select id="HorarioCombobox" name="Horario_Curso">
-                        <option value="A">1:00pm-2:30pm</option>
-                        <option value="B">2:30pm-4:00pm</option>
-                        <option value="C">4:00pm-5:00pm</option>
-                        <option value="D">5:00pm-6:00pm</option>
-                        <option value="F">6:00pm-7:30pm</option>
-                        <option value="G">7:30pm-9:00pm</option>
-                    </select>
-
-                    <input type="submit"  value="Registrar Curso" id="BotonRegistrar">
+                    <input type="submit"  value="Eliminar Curso" id="BotonRegistrar">
                     
 
 
                 </form>
                 <p id="Informacion">
-                    El encargado del sistema de registrado acepta los términos y condiciones, además de haber leído la política de
-                    privacidad. La información de cada curso será utilizada únicamente con el fin de conllevar un
-                    registro activo para La Casa De La Cultura de Mora y dicha información ser utilizada si así lo requiera.
+                    La persona encargada de eliminar los datos del curso seleccionado debe de tener en cuenta que estos datos no podrán ser
+                    recuperados. De esta manera acepta la responsabilidad de eliminar todo registro que se encuentre sobre el 
+                    curso en el sistema. El curso puede ser eliminado únicamente por motivos de fuerza mayor.
                 </p>
             </div>
 
